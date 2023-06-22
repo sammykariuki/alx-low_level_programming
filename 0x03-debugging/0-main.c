@@ -12,6 +12,6 @@ int main(void)
 
 	k = 0;
 
-	positive_or_negative(i);
+	positive_or_negative(k);
 	return (0);
 }
