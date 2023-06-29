@@ -7,7 +7,7 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int k = 0, j = 0, i, n = 0, ret;
+	int k = 0, j = 0, i, n = 0;
 	char c1, c2;
 
 	while (*(s1 + k) != '\0')
@@ -30,21 +30,10 @@ int _strcmp(char *s1, char *s2)
 		{
 			return (15);
 		}
-		else if (c1 == c2)
+		else if (c1 != c2)
 		{
-			ret = 0;
-			continue;
-		}
-		else if (c1 > c2)
-		{
-			ret = +15;
-			break;
-		}
-		else if (c2 > c1)
-		{
-			ret = -15;
-			break;
+			return (c1 - c2);
 		}
 	}
-	return (ret);
+	return (0);
 }
