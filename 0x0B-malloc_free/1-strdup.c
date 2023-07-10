@@ -12,19 +12,23 @@
 
 char *_strdup(char *str)
 {
-	unsigned long int i;
+	int i, j = 0;
 	char *new_str;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	new_str = (char *)malloc(sizeof(char) * sizeof(str));
+	while (*(str + j) != '\0')
+	{
+		j++;
+	}
+	new_str = (char *)malloc(sizeof(char) * j);
 	if (new_str == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < sizeof(str); i++)
+	for (i = 0; i < j; i++)
 	{
 		new_str[i] = str[i];
 	}
