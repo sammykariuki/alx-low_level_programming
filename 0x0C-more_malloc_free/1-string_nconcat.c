@@ -47,14 +47,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		count1++;
 	if (n >= count2)
 	{
-		ptr = malloc(count1 + count2 + 1);
+		ptr = malloc(sizeof(char) * (count1 + count2 + 1));
 		if (ptr == NULL)
 			return (NULL);
 		_concat(ptr, s1, s2, count1, count2);
 	}
 	else
 	{
-		ptr = malloc(count1 + n + 1);
+		ptr = malloc(sizeof(char) * (count1 + n + 1));
 		if (ptr == NULL)
 			return (NULL);
 		_concat(ptr, s1, s2, count1, n);
