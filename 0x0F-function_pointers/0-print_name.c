@@ -19,5 +19,7 @@ void print_name(char *name, void (*f)(char *))
 	}
 	if (c == 0)
 		name = "";
+	if (f == NULL)
+		return;
 	f(name);
 }
